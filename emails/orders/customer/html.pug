@@ -5,6 +5,7 @@ html(lang='en')
             @import url('https://fonts.googleapis.com/css?family=Montserrat');
             body {
                 font-family: 'Montserrat', Verdana, sans-serif;
+                font-size: 12pt;
             }
             .title {
                 text-align: center
@@ -12,7 +13,7 @@ html(lang='en')
             .container {
                 margin: 2em;
                 padding: 2em;
-                background: #F8F8F8;
+                background: #F2FDFF;
             }
             td {
                 padding: 15px;
@@ -22,11 +23,12 @@ html(lang='en')
 
     body
         div.title
+            img(src="https://stage.localing.co.uk/assets/img/logo/localing-logo.png", width="150")
             h1 Your Localing Order
         div.container
             p Hi #{customerName},
             p Thank you for supporting your local community through Localing!
-            p Your order code is #{orderCode}
+            h2 Your order code is #{orderCode}
             
             table.orders
                 each n in items
