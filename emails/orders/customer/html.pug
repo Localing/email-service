@@ -1,17 +1,85 @@
-p Hi #{customerName},
-p Thanks for your order!
-p Your order code is #{orderCode}
-p You ordered:
-table(style='width: 100%', border='1')
-    tr
-        th Name
-        th Quantity
-    each n in items
-        tr
-            td= n.name
-            td= n.quantity
+doctype html
+html(lang='en')
+    head
+        style(type='text/css').
+            body {
+                font-family: Verdana, sans-serif;
+                font-size: 12pt;
+            }
+            .title {
+                text-align: center
+            }
+            .header {
+                padding: 10px;
+                margin: 15px;
+                background: #EBF8F3;
+                text-align: center;
+                border-radius: 10px;
+            }
+            .date {
+                text-align: center;
+            }
+            .order {
+                margin: 15px;
+            }
+            .pickup {
+                text-align: center;
+            }
+            td, th {
+                padding: 10px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
 
-p You can pick up your order from:
-p #{businessName}
-p #{businessAddress}
-p #{businessPhone}
+    body
+
+        div.title
+            a(href="https://localing.co.uk"): img(src="https://stage.localing.co.uk/assets/img/logo/localing-logo.png", width="150")
+            h1 Your order from #{businessName}
+        
+        div.date
+            p #{formattedDate}
+
+        div.header
+            br
+            p Hi #{customerName}!
+            p Thank you for supporting your local community through Localing!
+            p Your order code is
+            h2 #{orderCode}
+            br
+        
+        div.order
+            table.orders(style='width: 100%')
+                tr
+                    th Item
+                    th Quantity  
+                each n in items
+                    tr
+                        td= n.name
+                        td= n.quantity
+        
+        div.pickup
+            br
+            p   
+                | You can pick up your order at:
+                br
+                br
+                | #{businessName}
+                br
+                | #{businessAddress}
+                br
+                | #{businessPhone}
+                br
+                br
+                | Please bring a copy of this receipt with you when you pick up your order!
+            hr
+
+        div.footer
+            br
+            p If you have any questions, please feel free to contact us at support@localing.co.uk.
+            p We would love to see you again, and until then we hope you will keep an eye on all the amazing deals just beyond your doorstep on Localing; you never know what gems might appear!
+            p We hope to see you again soon,
+            p 
+             | The Localing Team
+             br
+            a(href='https://localing.co.uk') Visit us at localing.co.uk.
