@@ -2,40 +2,64 @@ doctype html
 html(lang='en')
     head
         style(type='text/css').
-            @import url('https://fonts.googleapis.com/css?family=Montserrat');
             body {
-                font-family: 'Montserrat', Verdana, sans-serif;
+                font-family: Verdana, sans-serif;
                 font-size: 12pt;
             }
             .title {
                 text-align: center
             }
-            .container {
-                margin: 2em;
-                padding: 2em;
-                background: #F2FDFF;
+            .header {
+                padding: 10px;
+                margin: 15px;
+                background: #EBF8F3;
+                text-align: center;
+                border-radius: 10px;
             }
-            td {
-                padding: 15px;
+            .date {
+                text-align: center;
+            }
+            .order {
+                margin: 15px;
+            }
+            .pickup {
+                text-align: center;
+            }
+            td, th {
+                padding: 10px;
                 text-align: left;
                 border-bottom: 1px solid #ddd;
             }
 
     body
+
         div.title
-            img(src="https://stage.localing.co.uk/assets/img/logo/localing-logo.png", width="150")
-            h1 Your Localing Order
-        div.container
-            p Hi #{customerName},
+            a(href="https://localing.co.uk"): img(src="https://stage.localing.co.uk/assets/img/logo/localing-logo.png", width="150")
+            h1 Your order from #{businessName}
+        
+        div.date
+            p #{formattedDate}
+
+        div.header
+            br
+            p Hi #{customerName}!
             p Thank you for supporting your local community through Localing!
-            h2 Your order code is #{orderCode}
-            
-            table.orders
+            p Your order code is
+            h2 #{orderCode}
+            br
+        
+        div.order
+            table.orders(style='width: 100%')
+                tr
+                    th Item
+                    th Quantity  
                 each n in items
                     tr
                         td= n.name
                         td= n.quantity
-
+        
+        div.pickup
+            br
             p   
                 | You can pick up your order at:
                 br
@@ -48,8 +72,14 @@ html(lang='en')
                 br
                 br
                 | Please bring a copy of this receipt with you when you pick up your order!
+            hr
 
+        div.footer
+            br
             p If you have any questions, please feel free to contact us at support@localing.co.uk.
             p We would love to see you again, and until then we hope you will keep an eye on all the amazing deals just beyond your doorstep on Localing; you never know what gems might appear!
             p We hope to see you again soon,
-            p Localing
+            p 
+             | The Localing Team
+             br
+            a(href='https://localing.co.uk') Visit us at localing.co.uk.
