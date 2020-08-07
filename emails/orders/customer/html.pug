@@ -1,17 +1,53 @@
-p Hi #{customerName},
-p Thanks for your order!
-p Your order code is #{orderCode}
-p You ordered:
-table(style='width: 100%', border='1')
-    tr
-        th Name
-        th Quantity
-    each n in items
-        tr
-            td= n.name
-            td= n.quantity
+doctype html
+html(lang='en')
+    head
+        style(type='text/css').
+            @import url('https://fonts.googleapis.com/css?family=Montserrat');
+            body {
+                font-family: 'Montserrat', Verdana, sans-serif;
+            }
+            .title {
+                text-align: center
+            }
+            .container {
+                margin: 2em;
+                padding: 2em;
+                background: #F8F8F8;
+            }
+            td {
+                padding: 15px;
+                text-align: left;
+                border-bottom: 1px solid #ddd;
+            }
 
-p You can pick up your order from:
-p #{businessName}
-p #{businessAddress}
-p #{businessPhone}
+    body
+        div.title
+            h1 Your Localing Order
+        div.container
+            p Hi #{customerName},
+            p Thank you for supporting your local community through Localing!
+            p Your order code is #{orderCode}
+            
+            table.orders
+                each n in items
+                    tr
+                        td= n.name
+                        td= n.quantity
+
+            p   
+                | You can pick up your order at:
+                br
+                br
+                | #{businessName}
+                br
+                | #{businessAddress}
+                br
+                | #{businessPhone}
+                br
+                br
+                | Please bring a copy of this receipt with you when you pick up your order!
+
+            p If you have any questions, please feel free to contact us at support@localing.co.uk.
+            p We would love to see you again, and until then we hope you will keep an eye on all the amazing deals just beyond your doorstep on Localing; you never know what gems might appear!
+            p We hope to see you again soon,
+            p Localing
