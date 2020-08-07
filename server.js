@@ -1,6 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const Joi = require('joi');
 const app = express();
+const validator = require('express-joi-validation').createValidator({});
 
 const sesClient = require('./ses-client');
 const Email = require('email-templates');
@@ -12,17 +14,24 @@ app.get('/', (req, res) => {
     res.send("Email service is up.")
 });
 
+const customerOrderEmailSchema = Joi.object({
+    recipientEmail: Joi.string().email().required(),
+    customerName: Joi.string().required(),
+    orderCode: Joi.string().required(),
+    businessName: Joi.string().required(),
+    businessAddress: Joi.string().required(),
+    businessPhone: Joi.string().required(),
+    items: Joi.array().items({
+        name: Joi.string().required(),
+        quantity: Joi.number().required()
+    })
+})
+
 // order verification email to be sent to customers
-app.post('/orders/customer', (req, res) => {
+app.post('/orders/customer', validator.body(customerOrderEmailSchema), (req, res) => {
     const email = new Email();
-    email.render('orders/customer/html', {
-        customerName: req.body.customerName,
-        orderCode: req.body.orderCode,
-        businessName: req.body.businessName,
-        businessAddress: req.body.businessAddress,
-        businessPhone: req.body.businessPhone,
-        items: req.body.items
-    }).then((html) => {
+    email.render('orders/customer/html', {...req.body})
+    .then((html) => {
         sesClient.sendEmail(req.body.recipientEmail, `Your order from Localing (#${req.body.orderCode})`, html);
         res.send('Email sent');
     });

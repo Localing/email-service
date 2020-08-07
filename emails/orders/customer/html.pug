@@ -1,6 +1,16 @@
 p Hi #{customerName},
 p Thanks for your order!
 p Your order code is #{orderCode}
+p You ordered:
+table(style='width: 100%', border='1')
+    tr
+        th Name
+        th Quantity
+    each n in items
+        tr
+            td= n.name
+            td= n.quantity
+
 p You can pick up your order from:
 p #{businessName}
 p #{businessAddress}
