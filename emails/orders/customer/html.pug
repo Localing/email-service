@@ -52,11 +52,13 @@ html(lang='en')
             table.orders(style='width: 100%')
                 tr
                     th Item
-                    th Quantity  
+                    th Quantity
+                    th Price  
                 each n in items
                     tr
                         td= n.name
                         td= n.quantity
+                        td= "£" + n.price
         
         div.pickup
             br

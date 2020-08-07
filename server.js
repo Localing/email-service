@@ -27,7 +27,8 @@ const customerOrderEmailSchema = Joi.object({
     businessPhone: Joi.string().required(),
     items: Joi.array().items({
         name: Joi.string().required(),
-        quantity: Joi.number().required()
+        quantity: Joi.number().required(),
+        price: Joi.number().required()
     })
 })
 
