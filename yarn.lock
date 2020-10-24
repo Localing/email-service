@@ -753,10 +753,10 @@ events@1.1.1:
   resolved "https://registry.yarnpkg.com/events/-/events-1.1.1.tgz#9ebdb7635ad099c70dcc4c2a1f5004288e8bd924"
   integrity sha1-nr23Y1rQmccNzEwqH1AEKI6L2SQ=
 
-express-joi-validation@^4.0.4-beta.0:
-  version "4.0.4-beta.0"
-  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-4.0.4-beta.0.tgz#bb184d1daf01de5748d2ba0f397d44998a832fb8"
-  integrity sha512-1ozfZQkMKUHNchRQJIR5qzW2T6ENxJ8wSjDchVILHp+4fbLmJZIJkBfA27ZtZMTgRPEzg8vVU/cYdHM5DCSXEQ==
+express-joi-validation@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/express-joi-validation/-/express-joi-validation-5.0.0.tgz#c23e1714cb9c770db212b810908aba6a778ad174"
+  integrity sha512-R+jV2SYjoYCGqXRJkHHrCQ5mibwmdqqP04rgOFiCAfXJ21DfFKD8YxdONKimnFo95n83Au344Qq8jkzIxdsaPw==
 
 express@^4.17.1:
   version "4.17.1"
