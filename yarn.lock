@@ -454,10 +454,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-email-templates@^8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/email-templates/-/email-templates-8.0.0.tgz#7214f71132051551433f9fec727d270562e26d62"
-  integrity sha512-5rx7znxIl4eIcvGnVzbY3nNClKQv2ALlkBL49AGsmxyg2JjBzd/+sx1Lp+G8r4OIT7n9aicsqCC62eE7T/Miug==
+email-templates@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/email-templates/-/email-templates-8.0.1.tgz#437a58588eeb232eac7c18e2c25777e7b1f04a71"
+  integrity sha512-R717oSi/8OnwCOCgynhoKO0Ak5GvDYH53lSRQ4IO79lH+Df2196/YA+GFv17c0r9Hy8FtGrPzaGio5vCiffiTA==
   dependencies:
     "@ladjs/i18n" "^7.0.1"
     consolidate "^0.16.0"
@@ -467,7 +467,7 @@ email-templates@^8.0.0:
     juice "^7.0.0"
     lodash "^4.17.20"
     nodemailer "^6.4.16"
-    preview-email "^3.0.1"
+    preview-email "^3.0.2"
 
 encodeurl@~1.0.2:
   version "1.0.2"
@@ -834,10 +834,10 @@ lodash@^4.15.0, lodash@^4.17.11, lodash@^4.17.19, lodash@^4.17.20:
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
   integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
 
-mailparser@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/mailparser/-/mailparser-3.0.0.tgz#0c275cb3be02563fb8e10357529808ede277d70d"
-  integrity sha512-173gOV5y8kkCmvEZRgx0/XrOZ96F0Nm+tq382+/jIzPsBu9IYbn07l4t4DJqG4x5OSeKoBf5af/n1RRg+vbf8g==
+mailparser@2:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/mailparser/-/mailparser-2.8.1.tgz#a95b062e49dcb39051018962504a1a79646c7195"
+  integrity sha512-H/CYAO9dsw6SFNbEGGpZsejVSWDcFlyHjb1OkHUWg0wggUekva1tNc28trB155nSqM8rhtbwTKt//orX0AmJxQ==
   dependencies:
     encoding-japanese "1.0.30"
     he "1.2.0"
@@ -847,7 +847,7 @@ mailparser@^3.0.0:
     linkify-it "3.0.2"
     mailsplit "5.0.0"
     nodemailer "6.4.11"
-    tlds "1.209.0"
+    tlds "1.208.0"
 
 mailsplit@5.0.0:
   version "5.0.0"
@@ -1053,14 +1053,14 @@ pify@^4.0.1:
   resolved "https://registry.yarnpkg.com/pify/-/pify-4.0.1.tgz#4b2cd25c50d598735c50292224fd8c6df41e3231"
   integrity sha512-uB80kBFb/tfd68bVleG9T5GGsGPjJrLAUpR5PZIrhBnIaRTQRjqdJSsIKkOP6OAIFbj7GOrcudc5pNjZ+geV2g==
 
-preview-email@^3.0.1:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/preview-email/-/preview-email-3.0.1.tgz#d6c7ccece150d641351a411183d6fdbf17bdf043"
-  integrity sha512-2jxnQc82R9aEs+zv/cwkjrziX73nJHLKBOmZTzwibLkWy2AyFOkWsxSe/4ZQcYeCBcuH168h9vorIqRbF3rWXQ==
+preview-email@^3.0.2:
+  version "3.0.2"
+  resolved "https://registry.yarnpkg.com/preview-email/-/preview-email-3.0.2.tgz#64b85d054b24b54395e6a49e04e051b7eda8724a"
+  integrity sha512-yHMqclooam/SViaSmmkJR5rUoO3kf6XG3hmII4s5gnz4iHowFSifgzBIz61wvX4JonbE0pN6XRibC4yR11bOgQ==
   dependencies:
     dayjs "^1.9.6"
     debug "^4.3.1"
-    mailparser "^3.0.0"
+    mailparser "2"
     nodemailer "^6.4.16"
     open "^7.3.0"
     pug "^3.0.0"
@@ -1326,10 +1326,10 @@ titleize@^2.1.0:
   resolved "https://registry.yarnpkg.com/titleize/-/titleize-2.1.0.tgz#5530de07c22147a0488887172b5bd94f5b30a48f"
   integrity sha512-m+apkYlfiQTKLW+sI4vqUkwMEzfgEUEYSqljx1voUE3Wz/z1ZsxyzSxvH2X8uKVrOp7QkByWt0rA6+gvhCKy6g==
 
-tlds@1.209.0:
-  version "1.209.0"
-  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.209.0.tgz#13cfdc039331d49730ca7bfa9526fc9b319e2cec"
-  integrity sha512-KVsZ1NSpBodpo42/JIwTyau7SqUxV/qQMp2epSDPa99885LpHWLaVCCt8CWzGe4X5YIVNr+b6bUys9e9eEb5OA==
+tlds@1.208.0:
+  version "1.208.0"
+  resolved "https://registry.yarnpkg.com/tlds/-/tlds-1.208.0.tgz#f9a85c272aa500e56c92e7d342fbfdfbddaa9757"
+  integrity sha512-6kbY7GJpRQXwBddSOAbVUZXjObbCGFXliWWN+kOSEoRWIOyRWLB6zdeKC/Tguwwenl/KsUx016XR50EdHYsxZw==
 
 tlds@^1.212.0:
   version "1.212.0"
