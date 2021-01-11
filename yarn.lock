@@ -454,10 +454,10 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-email-templates@^8.0.2:
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/email-templates/-/email-templates-8.0.2.tgz#a77a4434f22836824e1bed710b8efd33723da9b2"
-  integrity sha512-HUTLDidFMs1c1QWGQuc0fxuhmwlbDsm/mUX4b5gAH72afC0159GExZK0UZkRaB4XIuPbfRVwZ9xWt0VGaHrMmw==
+email-templates@^8.0.3:
+  version "8.0.3"
+  resolved "https://registry.yarnpkg.com/email-templates/-/email-templates-8.0.3.tgz#d713770b37c34b7c5ca1f955a8e48bcefba68103"
+  integrity sha512-k4siLBwwd7B69pT8obgs94ZMkn5UzNRomHgMd2ibmCgwDxmGXEvf63oZzMSXcdTnmMX9wH7VJubtxDcEtC4yrQ==
   dependencies:
     "@ladjs/i18n" "^7.0.1"
     consolidate "^0.16.0"
@@ -466,7 +466,7 @@ email-templates@^8.0.2:
     html-to-text "^6.0.0"
     juice "^7.0.0"
     lodash "^4.17.20"
-    nodemailer "^6.4.16"
+    nodemailer "^6.4.17"
     preview-email "^3.0.3"
 
 encodeurl@~1.0.2:
@@ -979,10 +979,15 @@ node-fetch@^2.6.0:
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
   integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
-nodemailer@6.4.16, nodemailer@^6.4.16:
+nodemailer@6.4.16:
   version "6.4.16"
   resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.16.tgz#5cb6391b1d79ab7eff32d6f9f48366b5a7117293"
   integrity sha512-68K0LgZ6hmZ7PVmwL78gzNdjpj5viqBdFqKrTtr9bZbJYj6BRj5W6WGkxXrEnUl3Co3CBXi3CZBUlpV/foGnOQ==
+
+nodemailer@^6.4.16, nodemailer@^6.4.17:
+  version "6.4.17"
+  resolved "https://registry.yarnpkg.com/nodemailer/-/nodemailer-6.4.17.tgz#8de98618028953b80680775770f937243a7d7877"
+  integrity sha512-89ps+SBGpo0D4Bi5ZrxcrCiRFaMmkCt+gItMXQGzEtZVR3uAD3QAQIDoxTWnx3ky0Dwwy/dhFrQ+6NNGXpw/qQ==
 
 nth-check@~1.0.1:
   version "1.0.2"
