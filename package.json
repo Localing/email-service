@@ -9,7 +9,7 @@
     "@hapi/joi": "^17.1.1",
     "aws-sdk": "^2.828.0",
     "body-parser": "^1.19.0",
-    "dateformat": "^4.4.1",
+    "dateformat": "^4.4.2",
     "dotenv": "^8.2.0",
     "email-templates": "^8.0.3",
     "express": "^4.17.1",
